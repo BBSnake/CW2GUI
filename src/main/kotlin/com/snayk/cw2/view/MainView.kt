@@ -72,23 +72,35 @@ class MainView : View("Rule Generator") {
                 spacing = 5.0
                 button("Covering") {
                     action {
-                        val rules = covering(decisionSystem as DecisionSystem)
-                        decisionSystem?.resetCoverable()
-                        openInternalWindow(RulesView(rules))
+                        try {
+                            val rules = covering(decisionSystem as DecisionSystem)
+                            decisionSystem?.resetCoverable()
+                            openInternalWindow(RulesView(rules))
+                        } catch (e: Exception) {
+                            alert(Alert.AlertType.ERROR, "Error", "Provided file is in wrong format or contains and error!")
+                        }
                     }
                 }
                 button("Exhaustive") {
                     action {
-                        val rules = exhaustive(decisionSystem as DecisionSystem)
-                        decisionSystem?.resetCoverable()
-                        openInternalWindow(RulesView(rules))
+                        try {
+                            val rules = exhaustive(decisionSystem as DecisionSystem)
+                            decisionSystem?.resetCoverable()
+                            openInternalWindow(RulesView(rules))
+                        } catch (e: Exception) {
+                            alert(Alert.AlertType.ERROR, "Error", "Provided file is in wrong format or contains and error!")
+                        }
                     }
                 }
                 button("LEM2") {
                     action {
-                        val rules = lem(decisionSystem as DecisionSystem)
-                        decisionSystem?.resetCoverable()
-                        openInternalWindow(RulesView(rules))
+                        try {
+                            val rules = lem(decisionSystem as DecisionSystem)
+                            decisionSystem?.resetCoverable()
+                            openInternalWindow(RulesView(rules))
+                        } catch (e: Exception) {
+                            alert(Alert.AlertType.ERROR, "Error", "Provided file is in wrong format or contains and error!")
+                        }
                     }
                 }
             }
