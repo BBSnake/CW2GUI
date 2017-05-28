@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CW2GUI.iml" filepath="$PROJECT_DIR$/CW2GUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CW2GUI_main.iml" filepath="$PROJECT_DIR$/.idea/modules/CW2GUI_main.iml" group="CW2GUI" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CW2GUI_test.iml" filepath="$PROJECT_DIR$/.idea/modules/CW2GUI_test.iml" group="CW2GUI" />
+    </modules>
+  </component>
+</project>
