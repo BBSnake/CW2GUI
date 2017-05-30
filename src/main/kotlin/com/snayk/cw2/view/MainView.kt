@@ -75,7 +75,7 @@ class MainView : View("Rule Generator") {
                         try {
                             val rules = covering(decisionSystem as DecisionSystem)
                             decisionSystem?.resetCoverable()
-                            openInternalWindow(RulesView(rules))
+                            RulesView(rules).openWindow()
                         } catch (e: Exception) {
                             alert(Alert.AlertType.ERROR, "Error", "Provided file is in wrong format or contains and error!")
                         }
@@ -86,7 +86,7 @@ class MainView : View("Rule Generator") {
                         try {
                             val rules = exhaustive(decisionSystem as DecisionSystem)
                             decisionSystem?.resetCoverable()
-                            openInternalWindow(RulesView(rules))
+                            RulesView(rules).openWindow()
                         } catch (e: Exception) {
                             alert(Alert.AlertType.ERROR, "Error", "Provided file is in wrong format or contains and error!")
                         }
@@ -97,7 +97,7 @@ class MainView : View("Rule Generator") {
                         try {
                             val rules = lem(decisionSystem as DecisionSystem)
                             decisionSystem?.resetCoverable()
-                            openInternalWindow(RulesView(rules))
+                            RulesView(rules).openWindow()
                         } catch (e: Exception) {
                             alert(Alert.AlertType.ERROR, "Error", "Provided file is in wrong format or contains and error!")
                         }
